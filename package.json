@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Personnal website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://benoitrongeard@gitlab.com/benoitrongeard/website.git"
+  },
+  "author": "Rongeard Benoit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/benoitrongeard/website/issues"
+  },
+  "homepage": "https://gitlab.com/benoitrongeard/website#README",
+  "dependencies": {
+    "aos": "^2.1.1",
+    "bulma": "^0.4.1",
+    "progressbar.js": "^1.0.1"
+  }
+}
