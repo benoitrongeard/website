@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server | npm run watch-css",
+    "dev": "npm run watch-css | lite-server",
     "build-css": "node-sass --include-path scss app/assets/scss/main.scss app/dist/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
@@ -23,6 +23,7 @@
     "aos": "^2.1.1",
     "bulma": "^0.4.1",
     "node-sass": "^4.5.2",
+    "node-sass-import": "^1.1.1",
     "nodemon": "^1.11.0",
     "progressbar.js": "^1.0.1"
   }
