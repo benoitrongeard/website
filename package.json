@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run watch-css | lite-server",
     "build-css": "node-sass --include-path scss app/assets/scss/main.scss app/dist/css/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "production": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   "dependencies": {
     "aos": "^2.1.1",
     "bulma": "^0.4.1",
+    "font-awesome": "^4.7.0",
+    "hover.css": "^2.2.0",
     "node-sass": "^4.5.2",
     "node-sass-import": "^1.1.1",
     "nodemon": "^1.11.0",

@@ -3,7 +3,7 @@ html,body {
     background-color: rgb(38, 50, 56);
 }
 
-.container {
+.specific-container {
     height: 100%;
     border-width: 1px;
     border-style: solid;
@@ -11,4 +11,70 @@ html,body {
     border-color: #c6c6c6;
     background-color: #FFFFFF;
     box-shadow: 0 0 50px rgba(0,0,0,.1);
+}
+
+section.section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    .avatar-container {
+        text-align: right;
+
+        .avatar-img {
+            border-radius: 50%;
+            border-width: 1px;
+            border-style: solid;
+            width: 232px;
+            height: 232px;
+            overflow: hidden;
+            display: inline-block;
+            border-color: #6e6e6e;
+            background-color: #e3e3e3;
+
+            img {
+                width: 260px;
+                height: 260px;
+                margin-top: -15px;
+            }
+        }
+    }
+
+    .personal-info-container {
+        h1 {
+            text-transform: uppercase;
+            margin-top: 48px;
+            font-weight: 600;
+        }
+
+        .social {
+            ul {
+                margin: 12px 0;
+
+                li {
+                    display: inline-block;
+                }
+
+                .social-icon {
+                    display: inline-block;
+                    font-size: 16px;
+                    width: 36px;
+                    height: 36px;
+                    line-height: 36px;
+                    text-align: center;
+                    margin: 0 7px;
+                    border-radius: 50%;
+                    border-style: solid;
+                    border-width: 1px;
+                    vertical-align: middle;
+                    color: #fff;
+                    border-color: #068cd6;
+                    background-color: #00b6f9;
+
+                    i {
+                        vertical-align: initial;
+                    }
+                }
+            }
+        }
+    }
 }
