@@ -1,4 +1,4 @@
-$fa-font-path: "../../resources/fonts/font-awesome";
+@import "variables";
 
 @import "./node_modules/font-awesome/scss/font-awesome";
 @import "./node_modules/bulma/bulma";
@@ -6,4 +6,5 @@ $fa-font-path: "../../resources/fonts/font-awesome";
 /*@import "./node_modules/hover.css/scss/hover";*/
 
 @import "animation";
-@import "design"
+@import "design";
+

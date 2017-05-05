@@ -17,5 +17,29 @@ gulp.task('hoverCss', function(){
         .pipe(gulp.dest(destinationLibs + '/hover-css/'));
 });
 
+//Fonction pour inclure Animate
+gulp.task('animateCss', function(){
+    return gulp.src(source + '/animate.css/animate.min.css')
+        .pipe(gulp.dest(destinationLibs + '/animate/'));
+});
+
+//Fonction pour inclure ProgressBar
+gulp.task('progressBar', function(){
+    return gulp.src(source + '/progressbar.js/dist/progressbar.min.js')
+        .pipe(gulp.dest(destinationLibs + '/progressbar/'));
+});
+
+//Fonction pour inclure Jquery
+gulp.task('jquery', function(){
+    return gulp.src(source + '/jquery/dist/jquery.min.js')
+        .pipe(gulp.dest(destinationLibs + '/jquery/'));
+});
+
+//Fonction pour inclure JqueryInView
+gulp.task('jqueryInView', function(){
+    return gulp.src(source + '/jquery-inview/jquery.inview.min.js')
+        .pipe(gulp.dest(destinationLibs + '/jquery-inview/'));
+});
+
 // Tâche "build"
-gulp.task('build', ['fontAwesome', 'hoverCss']);
+gulp.task('build', ['fontAwesome', 'hoverCss', 'animateCss', 'progressBar', 'jquery', 'jqueryInView']);

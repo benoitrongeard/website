@@ -2,11 +2,13 @@
 <html>
 <head>
     <title>Benoit Rongeard - Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+    <link rel="stylesheet" type="text/css" href="resources/libs/animate/animate.min.css">
 </head>
 <body>
     <div class="container specific-container">
-        <section class="section">
+        <section class="section header">
             <div class="columns">
                 <div class="column is-5 avatar-container">
                     <div class="avatar-img">
@@ -25,7 +27,64 @@
                     </div>
                 </div>
             </div>
+            <div class="columns">
+                <div class="column">
+                    <nav class="nav">
+                        <div class="container">
+                            <div class="nav-center">
+                                <a class="nav-item is-tab is-active">Home</a>
+                                <a class="nav-item is-tab">Features</a>
+                                <a class="nav-item is-tab">Pricing</a>
+                                <a class="nav-item is-tab">About</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="section profile">
+            <div class="columns">
+                <div class="column is-12 title-container">
+                    <h1 class="title is-2">Mon savoir faire</h1>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter knowledge-container">
+                    <div class="circle-block">
+                        <span class="icon"><i class="fa fa-android"></i></span>
+                        <span class="icon"><i class="fa fa-apple"></i></span>
+                        <span class="name">Applications mobile</span>
+                    </div>
+                    <div class="circle-block">
+                        <span class="icon"><i class="fa fa-desktop"></i></span>
+                        <span class="name">Applications web</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills">
+            <div class="columns">
+                <div class="column is-12 title-container">
+                    <h1 class="title is-2">Mes compétences</h1>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter bar-container">
+                    <div class="progressBar animated" id="progressBar1" data-value="70"></div>
+                    <div class="progressBar animated" id="progressBar2" data-value="50"></div>
+                    <div class="progressBar animated" id="progressBar3" data-value="60"></div>
+                    <div class="progressBar animated" id="progressBar4" data-value="90"></div>
+                    <div class="progressBar animated" id="progressBar5" data-value="90"></div>
+                    <div class="progressBar animated" id="progressBar6" data-value="80"></div>
+                </div>
+            </div>
         </section>
     </div>
+    <script type="text/javascript" src="resources/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/libs/jquery-inview/jquery.inview.min.js"></script>
+    <script type="text/javascript" src="resources/libs/progressbar/progressbar.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

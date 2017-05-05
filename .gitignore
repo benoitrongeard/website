@@ -1,3 +1,4 @@
 node_modules/
 app/dist/css
 app/dist/js
+app/resources/libs/*
