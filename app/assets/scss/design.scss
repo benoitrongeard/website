@@ -1,14 +1,10 @@
 html,body {
-    height: 100%;
     background-color: rgb(38, 50, 56);
 }
 
 .specific-container {
     height: 100%;
-    border-width: 1px;
-    border-style: solid;
     margin: 50px auto;
-    border-color: #c6c6c6;
     background-color: #FFFFFF;
     box-shadow: 0 0 50px rgba(0,0,0,.1);
 }
@@ -37,6 +33,12 @@ section.header {
                 height: 260px;
                 margin-top: -15px;
             }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .avatar-container {
+            text-align: center;
         }
     }
 
@@ -70,6 +72,11 @@ section.header {
                     color: #fff;
                     border-color: #068cd6;
                     background-color: #00b6f9;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: #0089d5;
+                    }
 
                     i {
                         vertical-align: initial;
@@ -78,10 +85,23 @@ section.header {
             }
         }
     }
+
+    .specific-column-nav {
+        padding-left: 0px;
+        padding-right: 0px;
+
+        @media screen and (max-width: 768px) {
+            a.nav-item.is-tab {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+        }
+    }
 }
 
 .title-container {
     text-align: center;
+    margin: 10px 0;
 
     h1 {
         font-weight: 600;
@@ -92,6 +112,7 @@ section.profile {
 
     .knowledge-container {
         text-align: center;
+        margin-top: 25px;
 
         .circle-block {
             display: inline-block;
@@ -137,15 +158,20 @@ section.profile {
 
 section.skills {
 
-    .bar-container {
-        margin-top: 450px;
-        margin-bottom: 450px;
+    .columns-skills {
+        align-items: center;
+        text-align: center;
+    }
 
+    .bar-container {
+
+        .bar-container-field {
+            opacity: 0;
+        }
         .progressBar {
             width: 100%;
             display: block;
             position: relative;
-            opacity: 0;
         }
 
         .progressBar-label {
@@ -163,6 +189,29 @@ section.skills {
             background-color: #FFFFFF;
             border-color: #d6d6d6;
             font-size: 14px;
+        }
+    }
+
+    .chart-container {
+
+        .columns-chart {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .chart-container-field {
+            opacity: 0;
+            margin: 0 10px;
+            display: inline-block;
+
+            label {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+
+        .progressChart {
+            position: relative;
         }
     }
 }
