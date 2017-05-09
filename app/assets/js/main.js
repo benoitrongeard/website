@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
             $(this).addClass('is-active');
 
             $('html, body').animate({
-                scrollTop:$(target_id).offset().top
+                scrollTop: $(target_id).offset().top
             }, 'slow');
         });
     });
@@ -26,6 +26,23 @@ jQuery(document).ready(function($) {
                 $(this).addClass('zoomIn');
             }
         });
+    });
+
+    //Animation for the scrollToTop button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 150) {
+            $('.scrollToTop').show();
+        } else {
+            $('.scrollToTop').hide();
+        }
+    });
+
+    //Event for the scrollToTop button
+    $('.scrollToTop').on('click', function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, "slow");
+        return false;
     });
 
     //Create progressBar

@@ -7,6 +7,7 @@ html,body {
     margin: 50px auto;
     background-color: #FFFFFF;
     box-shadow: 0 0 50px rgba(0,0,0,.1);
+    position: relative;
 }
 
 .section {
@@ -214,6 +215,47 @@ section.interest {
     }
 }
 
+.scrollToTop {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    line-height: 35px;
+    text-align: center;
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+    display: none;
+    background-color: #f5f5f5;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d1d1d1;
+    border-radius: 50px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 20px;
+
+    &:hover {
+        border-color: #068cd6;
+        background-color: #00b6f9;
+        color: #fff;
+    }
+
+    i {
+        font-size: inherit;
+        vertical-align: initial;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .scrollToTop {
+        display: none !important;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
