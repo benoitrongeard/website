@@ -251,6 +251,99 @@ section.interest {
     }
 }
 
+section.experiences-container {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+        background: #ededed;
+    }
+
+    .experiences-timeline-block {
+        position: relative;
+
+        .experiences-timeline-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            margin-left: 0px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+            background: #00b6f9;
+        }
+
+        .bounceDelay {
+            animation-delay: 0.7s;
+        }
+
+        .experiences-timeline-content {
+            position: relative;
+            background: white;
+            border-radius: 0.25em;
+            padding: 1em;
+            box-shadow: 0 2px 0 #ededed;
+            margin-left: 60px;
+            padding: 1.6em;
+            border: 1px solid #ededed;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 100%;
+                height: 0;
+                width: 0;
+                border: 10px solid transparent;
+                border-right: 10px solid #ededed;
+                top: 16px;
+            }
+        }
+
+        .bounceLeftDelay {
+            animation-delay: 1.2s;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    section.experiences-container {
+
+        &:before {
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .experiences-timeline-block {
+
+            .experiences-timeline-img {
+                width: 60px;
+                height: 60px;
+                left: 50%;
+                margin-left: -30px;
+            }
+
+            .experiences-timeline-content {
+                margin-left: 0px;
+                width: 45%;
+
+                &:before {
+                    top: 24px;
+                    left: 100%;
+                    border-color: transparent;
+                    border-left-color: #ededed;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .scrollToTop {
         display: none !important;

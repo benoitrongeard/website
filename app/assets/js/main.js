@@ -18,12 +18,23 @@ jQuery(document).ready(function($) {
     });
 
     //Animations for show elements when scroll
-    $('.animated').each(function(index, el) {
+    $('.animation').each(function(index, el) {
         $(this).css("opacity", 0);
         $(this).on('inview', function(event, visible) {
             if (visible) {
                 $(this).css("opacity", 1);
                 $(this).addClass('zoomIn');
+            }
+        });
+    });
+
+    //Animations for timeLine
+    $('.customAnimation').each(function(index, el) {
+        $(this).css("opacity", 0);
+        $(this).on('inview', function(event, visible) {
+            if (visible) {
+                $(this).css("opacity", 1);
+                $(this).addClass($(this).data('animation'));
             }
         });
     });
