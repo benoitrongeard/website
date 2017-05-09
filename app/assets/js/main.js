@@ -1,5 +1,23 @@
 jQuery(document).ready(function($) {
 
+    //Actions for nav-bar
+    $('.nav-target').each(function(index, el) {
+
+        $(this).click(function(event) {
+            event.preventDefault();
+
+            var target_id = $(this).attr("href");
+
+            $('.nav-target').removeClass('is-active');
+            $(this).addClass('is-active');
+
+            $('html, body').animate({
+                scrollTop:$(target_id).offset().top
+            }, 'slow');
+        });
+    });
+
+    //Create progressBar
     $('.progressBar').each(function(index, el) {
         var id = "#"+$(this).attr("id");
         var progressBar = createProgressBar($(this).data("value"), id);
@@ -13,15 +31,16 @@ jQuery(document).ready(function($) {
         });
     });
 
-    $('.progressChart').each(function(index, el) {
+    //Create progressCircle
+    $('.progressCircle').each(function(index, el) {
         var id = "#"+$(this).attr("id");
-        var progressChart = createProgressChart($(this).data("value"), id);
+        var progressCircle = createProgressCircle($(this).data("value"), id);
 
         $(this).on('inview', function(event, visible) {
             if (visible) {
                 $(this).parent().eq(0).css("opacity", 1);
                 $(this).parent().eq(0).addClass('zoomIn');
-                progressChart.animate($(this).data("value")/100);
+                progressCircle.animate($(this).data("value")/100);
             }
         });
     });
@@ -55,7 +74,7 @@ jQuery(document).ready(function($) {
         return bar;
     }
 
-    function createProgressChart(value, id) {
+    function createProgressCircle(value, id) {
         var circle = new ProgressBar.Circle(id, {
             color: '#00b6f9',
             trailColor: '#eee',

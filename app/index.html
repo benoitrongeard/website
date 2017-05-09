@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container specific-container">
-        <section class="section header">
+        <section class="section header" id="header">
             <div class="columns">
                 <div class="column is-5 avatar-container">
                     <div class="avatar-img">
@@ -32,10 +32,9 @@
                     <nav class="nav">
                         <div class="container">
                             <div class="nav-center">
-                                <a class="nav-item is-tab is-active">Home</a>
-                                <a class="nav-item is-tab">Features</a>
-                                <a class="nav-item is-tab">Pricing</a>
-                                <a class="nav-item is-tab">About</a>
+                                <a class="nav-item is-tab is-active nav-target" href="#header">Profil</a>
+                                <a class="nav-item is-tab nav-target" href="#experiences">Expériences</a>
+                                <a class="nav-item is-tab nav-target" href="#skills">Compétences</a>
                             </div>
                         </div>
                     </nav>
@@ -43,7 +42,7 @@
             </div>
         </section>
 
-        <section class="section profile">
+        <section class="section profil">
             <div class="columns">
                 <div class="column is-12 title-container">
                     <h1 class="title is-2">Mon savoir faire</h1>
@@ -64,7 +63,15 @@
             </div>
         </section>
 
-        <section class="section skills">
+        <section class="section experiences" id="experiences">
+            <div class="columns">
+                <div class="column is-12 title-container">
+                    <h1 class="title is-2">Mes expériences</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills">
             <div class="columns">
                 <div class="column is-12 title-container">
                     <h1 class="title is-2">Mes compétences</h1>
@@ -108,43 +115,55 @@
                             <div class="progressBar" id="progressBar6" data-value="80"></div>
                         </p>
                     </div>
+                    <div class="field bar-container-field animated">
+                        <label class="label">SASS</label>
+                        <p class="control">
+                            <div class="progressBar" id="progressBar7" data-value="80"></div>
+                        </p>
+                    </div>
+                    <div class="field bar-container-field animated">
+                        <label class="label">NodeJS</label>
+                        <p class="control">
+                            <div class="progressBar" id="progressBar8" data-value="60"></div>
+                        </p>
+                    </div>
                 </div>
 
-                <div class="column is-12-mobile is-half chart-container">
-                    <div class="columns columns-chart">
-                         <div class="field chart-container-field animated column is-5-mobile is-3">
+                <div class="column is-12-mobile is-half circle-container">
+                    <div class="columns columns-circle">
+                         <div class="field circle-container-field animated column is-5-mobile is-3">
                             <p class="control">
-                                <div class="progressChart" id="progressChart1" data-value="95"></div>
+                                <div class="progressCircle" id="progressCircle1" data-value="95"></div>
                             </p>
                             <label class="label">Bootstrap</label>
                         </div>
-                         <div class="field chart-container-field animated column is-5-mobile is-3">
+                         <div class="field circle-container-field animated column is-5-mobile is-3">
                             <p class="control">
-                                <div class="progressChart" id="progressChart2" data-value="90"></div>
+                                <div class="progressCircle" id="progressCircle2" data-value="90"></div>
                             </p>
                             <label class="label">Bulma</label>
                         </div>
-                         <div class="field chart-container-field animated column is-5-mobile is-3">
+                         <div class="field circle-container-field animated column is-5-mobile is-3">
                             <p class="control">
-                                <div class="progressChart" id="progressChart3" data-value="90"></div>
+                                <div class="progressCircle" id="progressCircle3" data-value="90"></div>
                             </p>
                             <label class="label">Jquery</label>
                         </div>
-                         <div class="field chart-container-field animated column is-5-mobile is-3">
+                         <div class="field circle-container-field animated column is-5-mobile is-3">
                             <p class="control">
-                                <div class="progressChart" id="progressChart4" data-value="85"></div>
+                                <div class="progressCircle" id="progressCircle4" data-value="85"></div>
                             </p>
                             <label class="label">Laravel</label>
                         </div>
-                         <div class="field chart-container-field animated column is-5-mobile is-3">
+                         <div class="field circle-container-field animated column is-5-mobile is-3">
                             <p class="control">
-                                <div class="progressChart" id="progressChart5" data-value="75"></div>
+                                <div class="progressCircle" id="progressCircle5" data-value="75"></div>
                             </p>
                             <label class="label">Angular 2</label>
                         </div>
-                         <div class="field chart-container-field animated column is-5-mobile is-3">
+                         <div class="field circle-container-field animated column is-5-mobile is-3">
                             <p class="control">
-                                <div class="progressChart" id="progressChart6" data-value="75"></div>
+                                <div class="progressCircle" id="progressCircle6" data-value="75"></div>
                             </p>
                             <label class="label">Ionic 2</label>
                         </div>
