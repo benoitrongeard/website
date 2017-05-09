@@ -17,6 +17,17 @@ jQuery(document).ready(function($) {
         });
     });
 
+    //Animations for show elements when scroll
+    $('.animated').each(function(index, el) {
+        $(this).css("opacity", 0);
+        $(this).on('inview', function(event, visible) {
+            if (visible) {
+                $(this).css("opacity", 1);
+                $(this).addClass('zoomIn');
+            }
+        });
+    });
+
     //Create progressBar
     $('.progressBar').each(function(index, el) {
         var id = "#"+$(this).attr("id");
@@ -24,8 +35,6 @@ jQuery(document).ready(function($) {
 
         $(this).on('inview', function(event, visible) {
             if (visible) {
-                $(this).parent().eq(0).css("opacity", 1);
-                $(this).parent().eq(0).addClass('zoomIn');
                 progressBar.animate($(this).data("value")/100);
             }
         });
@@ -38,8 +47,6 @@ jQuery(document).ready(function($) {
 
         $(this).on('inview', function(event, visible) {
             if (visible) {
-                $(this).parent().eq(0).css("opacity", 1);
-                $(this).parent().eq(0).addClass('zoomIn');
                 progressCircle.animate($(this).data("value")/100);
             }
         });
