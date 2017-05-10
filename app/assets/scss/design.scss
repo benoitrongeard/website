@@ -109,8 +109,8 @@ section.profil {
 
 .circle-block {
     display: inline-block;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
     text-align: center;
 
     &:hover .icon {
@@ -265,7 +265,10 @@ section.experiences-container {
     }
 
     .experiences-timeline-block {
+        display: flex;
+        justify-content: flex-start;
         position: relative;
+        margin-top: 20px;
 
         .experiences-timeline-img {
             position: absolute;
@@ -273,10 +276,19 @@ section.experiences-container {
             left: 0;
             width: 40px;
             height: 40px;
+            line-height: 40px;
             margin-left: 0px;
             border-radius: 50%;
-            box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 0 4px #FFFFFF, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
             background: #00b6f9;
+            text-align: center;
+            font-size: 22px;
+
+            i {
+                font-size: inherit;
+                vertical-align: initial;
+                color: #FFFFFF;
+            }
         }
 
         .bounceDelay {
@@ -303,6 +315,20 @@ section.experiences-container {
                 border-right: 10px solid #ededed;
                 top: 16px;
             }
+
+            .title {
+                font-weight: 400;
+            }
+
+            .subtitle {
+                color: #00b6f9;
+
+                i {
+                    font-size: inherit;
+                    vertical-align: initial;
+                    margin-right: 10px;
+                }
+            }
         }
 
         .bounceLeftDelay {
@@ -325,6 +351,7 @@ section.experiences-container {
             .experiences-timeline-img {
                 width: 60px;
                 height: 60px;
+                line-height: 60px;
                 left: 50%;
                 margin-left: -30px;
             }
@@ -338,6 +365,19 @@ section.experiences-container {
                     left: 100%;
                     border-color: transparent;
                     border-left-color: #ededed;
+                }
+            }
+        }
+
+        .experiences-timeline-block:nth-child(even) {
+            justify-content: flex-end;
+
+            .experiences-timeline-content {
+                &:before {
+                    top: 24px;
+                    left: auto;
+                    border-color: transparent;
+                    border-right-color: #ededed;
                 }
             }
         }
