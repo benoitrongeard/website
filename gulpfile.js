@@ -1,5 +1,6 @@
 // Requis
 var gulp = require('gulp');
+var csscomb = require('gulp-csscomb');
 
 var source = './node_modules';
 var destinationFonts = './app/resources/fonts';
@@ -41,5 +42,13 @@ gulp.task('jqueryInView', function(){
         .pipe(gulp.dest(destinationLibs + '/jquery-inview/'));
 });
 
+//Fonction pour lancer CSSComb
+gulp.task('csscomb', function() {
+    gulp.src('app/assets/scss/**')
+        .pipe(csscomb())
+        .pipe(gulp.dest('app/assets/scss'));
+});
+
 // Tâche "build"
 gulp.task('build', ['fontAwesome', 'hoverCss', 'animateCss', 'progressBar', 'jquery', 'jqueryInView']);
+gulp.task('production', ['csscomb']);
