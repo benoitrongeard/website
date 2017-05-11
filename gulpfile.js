@@ -1,6 +1,10 @@
 // Requis
-var gulp = require('gulp');
-var csscomb = require('gulp-csscomb');
+var gulp = require('gulp'),
+    csscomb = require('gulp-csscomb'),
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    minifyCss = require('gulp-clean-css');
 
 var source = './node_modules';
 var destinationFonts = './app/resources/fonts';
@@ -49,6 +53,16 @@ gulp.task('csscomb', function() {
         .pipe(gulp.dest('app/assets/scss'));
 });
 
-// Tâche "build"
+//Fonction pour rassembler tous les JS, les CSS et les minifier
+gulp.task('useref', function () {
+    return gulp.src('app/*.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulp.dest('app/'));
+});
+
+// Tâches
 gulp.task('build', ['fontAwesome', 'hoverCss', 'animateCss', 'progressBar', 'jquery', 'jqueryInView']);
-gulp.task('production', ['csscomb']);
+gulp.task('dev', ['csscomb']);
+gulp.task('production', ['useref']);

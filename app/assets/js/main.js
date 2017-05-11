@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
             },
             from: {color: '#00b6f9'},
             to: {color: '#00b6f9'},
-            step: (state, bar) => {
+            step: function(state, bar) {
                 var marginLeft = bar.value() * 100 - 2;
                 $(id+" .progressBar-label").css("left", marginLeft+"%");
                 bar.setText(Math.round(bar.value() * 100) + ' %');
