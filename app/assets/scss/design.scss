@@ -206,6 +206,29 @@ section.skills {
             position: relative;
         }
     }
+
+    .columns-skills-image{
+        justify-content: center;
+        text-align: center;
+
+        .skills-container-img {
+            position: relative;
+            height: 150px;
+            display: inline-block;
+
+            img {
+                position: absolute;
+                width: 90%;
+                height: auto;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                max-width: 300px;
+            }
+        }
+    }
 }
 
 section.interest {
@@ -382,10 +405,29 @@ section.experiences-container {
             }
         }
     }
+
+    .columns-skills-image-tablet {
+        display: none !important;
+    }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 999px) {
     .scrollToTop {
+        display: none !important;
+    }
+
+    .columns-skills-image-mobile {
+
+        .skills-container-img {
+            height: 100px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .columns-skills-image-desktop {
         display: none !important;
     }
 }
@@ -425,6 +467,19 @@ section.experiences-container {
     section.profil {
         .circle-block:nth-child(2) {
             margin-top: 30px;
+        }
+    }
+
+    section.skills {
+        .columns-skills-image-tablet {
+
+            .skills-container-img {
+                height: 100px;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 

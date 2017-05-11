@@ -18,26 +18,27 @@ jQuery(document).ready(function($) {
     });
 
     //Animations for show elements when scroll
-    $('.animation').each(function(index, el) {
-        $(this).css("opacity", 0);
-        $(this).on('inview', function(event, visible) {
-            if (visible) {
-                $(this).css("opacity", 1);
-                $(this).addClass('zoomIn');
-            }
-        });
-    });
+    animateElements('.animation', 0);
 
-    //Animations for timeLine
-    $('.customAnimation').each(function(index, el) {
-        $(this).css("opacity", 0);
-        $(this).on('inview', function(event, visible) {
-            if (visible) {
-                $(this).css("opacity", 1);
-                $(this).addClass($(this).data('animation'));
-            }
+    //Animate skills wall
+    animateElements('.skills-container-img', 100);
+
+    function animateElements(elementClass, delayIncrement) {
+        var delay = 0;
+        $(elementClass).each(function(index, el) {
+            var element = $(this);
+            $(element).css("opacity", 0);
+            $(element).on('inview', function(event, visible) {
+                if (visible) {
+                    setTimeout(function(){
+                        $(element).css("opacity", 1);
+                        $(element).addClass($(element).data('animation'));
+                    }, delay);
+                    delay += delayIncrement;
+                }
+            });
         });
-    });
+    }
 
     //Animation for the scrollToTop button
     $(window).scroll(function() {
@@ -80,7 +81,7 @@ jQuery(document).ready(function($) {
         });
     });
 
-
+    //Function for create progressBar
     function createProgressBar(value, id) {
         var bar = new ProgressBar.Line(id, {
             strokeWidth: 1,
@@ -109,6 +110,7 @@ jQuery(document).ready(function($) {
         return bar;
     }
 
+    //Function for create progressCircle
     function createProgressCircle(value, id) {
         var circle = new ProgressBar.Circle(id, {
             color: '#00b6f9',
