@@ -46,6 +46,12 @@ gulp.task('jqueryInView', function(){
         .pipe(gulp.dest(destinationLibs + '/jquery-inview/'));
 });
 
+//Fonction pour inclure PaceJs
+gulp.task('pace', function(){
+    return gulp.src(source + '/pace-progress/pace.min.js')
+        .pipe(gulp.dest(destinationLibs + '/pace/'));
+});
+
 //Fonction pour lancer CSSComb
 gulp.task('csscomb', function() {
     gulp.src('app/assets/scss/**')
@@ -63,6 +69,6 @@ gulp.task('useref', function () {
 });
 
 // Tâches
-gulp.task('build', ['fontAwesome', 'hoverCss', 'animateCss', 'progressBar', 'jquery', 'jqueryInView']);
+gulp.task('build', ['fontAwesome', 'hoverCss', 'animateCss', 'progressBar', 'jquery', 'jqueryInView', 'pace']);
 gulp.task('dev', ['csscomb']);
 gulp.task('production', ['useref']);

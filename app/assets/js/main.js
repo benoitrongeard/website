@@ -1,4 +1,10 @@
 jQuery(document).ready(function($) {
+    Pace.on("done", function(){
+        console.log("bonjour");
+        $("#container").css("opacity", 1);
+        $("#container").addClass("slideInUp");
+    });
+
 
     //Actions for nav-bar
     $('.nav-target').each(function(index, el) {
