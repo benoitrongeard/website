@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run watch-css | lite-server",
+    "dev": "npm run watch-css | live-server --open=app/index.html",
     "build-css": "node-sass --include-path scss app/assets/scss/main.scss app/dist/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "production": "gulp build"
@@ -23,23 +23,24 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "aos": "^2.1.1",
+    "audit": "^0.0.6",
     "bulma": "^0.4.1",
     "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "gulp-csscomb": "^3.0.8",
     "hover.css": "^2.2.0",
     "jquery": "^3.2.1",
     "jquery-inview": "^1.1.2",
-    "node-sass": "^4.5.2",
-    "node-sass-import": "^1.1.1",
-    "nodemon": "^1.11.0",
     "pace-progress": "^1.0.2",
     "progressbar.js": "^1.0.1"
   },
   "devDependencies": {
-    "gulp-clean-css": "^3.2.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-csscomb": "^3.1.0",
     "gulp-if": "^2.0.2",
     "gulp-uglify": "^2.1.2",
-    "gulp-useref": "^3.1.2"
+    "gulp-useref": "^3.1.2",
+    "node-sass": "^9.0.0",
+    "node-sass-import": "^1.0.5",
+    "nodemon": "^3.0.2"
   }
 }
